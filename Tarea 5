@@ -1,0 +1,38 @@
+int led1=2;
+	int led2=3;
+	
+
+	int t1;
+	int t2;
+	int i;
+	void setup() {
+	
+
+	Serial.begin(9600);
+	Serial.print("¿Cuantas veces quieres qe el led se prenda y apague?\n");
+	while(Serial.available()==0);
+	t1=Serial.parseInt();
+	pinMode(led1,OUTPUT);
+	t2=Serial.parseInt();
+	pinMode(led2,OUTPUT);
+	
+
+	}
+	
+
+	void loop() {
+	for(i=0;t1=i;i++){
+	digitalWrite(led1,HIGH);
+	  delay(1000);
+	  digitalWrite(led1,LOW);
+	  delay(1000);
+	}
+	for(i=0;t2=i;i++){
+	  digitalWrite(led2,HIGH);
+	  delay(1000);
+	  digitalWrite(led2,LOW);
+	  delay(1000);
+	}
+	 
+	  }
+
